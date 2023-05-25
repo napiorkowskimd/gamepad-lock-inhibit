@@ -9,8 +9,8 @@ license=('MIT')
 depends=('python>3.8.0' 'python-pyudev' 'python-pydbus' 'python-evdev')
 source=('gamepad-lock-inhibit.py' 'gamepad-lock-inhibit.service')
 
-md5sums=('145e688190cd9564e967671c88ff37ea'
-         'f4dad5a96f23ab5bfdb3b78e4e8d4e2e')
+md5sums=('ae9ac9dbb29e0af57ec5389454b48ec1'
+         '1225d1685042a21aac6388757f7895bc')
 
 
 package() {

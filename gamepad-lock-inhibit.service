@@ -3,6 +3,7 @@ Description=Service that prevents screensaver when gamepad is actively used
 After=network.target
 
 [Service]
+Nice=19
 ExecStart=/usr/bin/gamepad-lock-inhibit.py
 
 [Install]

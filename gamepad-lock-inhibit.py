@@ -16,7 +16,7 @@ class GamepadsFinder:
 
     def __init__(self, loop: asyncio.AbstractEventLoop, cb_add, cb_remove):
         self.logger = logging.getLogger("GamepadsFinder")
-        
+
         self.context = pyudev.Context()
         self.devices = list(GamepadsFinder.get_device_path(x) for x in self.context.list_devices(
             subsystem=self.SUBSYSTEM, ID_INPUT_JOYSTICK=1, sys_name=self.SYS_NAME_PREFIX+"*"))
@@ -95,7 +95,6 @@ class GamepadsWatcher:
 
         self.create_monitor_task(device)
 
-
     def remove_device(self, device):
         self.logger.info(f"Removing device {device}")
         task = self.tasks.get(device, None)
@@ -118,7 +117,6 @@ class GamepadsWatcher:
         for device in devices:
             self.logger.info(f"create monitor for {device}")
             self.create_monitor_task(device)
-
 
     async def stop(self):
         self.started = False
