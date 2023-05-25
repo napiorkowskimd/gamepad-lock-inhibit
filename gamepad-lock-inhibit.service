@@ -1,0 +1,9 @@
+[Unit]
+Description=Service that prevents screensaver when gamepad is actively used 
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/gamepad-lock-inhibit.py
+
+[Install]
+WantedBy=multi-user.target
